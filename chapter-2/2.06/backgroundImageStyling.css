@@ -1,0 +1,13 @@
+.main_body{
+    width: 1000px;
+    height: 600px;
+    background-image: url('images/full_saturn_before_cassini_impact%20copy.png'), url('images/wavey_lines_2.png');
+    background-size: 25% 25%;
+    background-repeat: repeat, repeat;
+    background-position: bottom center, top center;
+}
+
+h1 {
+    color: darkblue;
+    font-size: 50px;
+}

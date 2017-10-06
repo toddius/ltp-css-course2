@@ -1,0 +1,20 @@
+/* This is the external CSS code for my first lab in the CSS Specialsit course */ 
+
+/* All the headers have a lightblue background. */
+h1, h2, h3 {
+    background-color: lightblue;
+}
+
+/* All the the paragraph tags in the unordered list have a yellow background. */
+ul p{
+    background-color: yellow;
+}
+
+/* The anchor in a paragraph tag have an orange background. */
+p>a {
+    background-color: orange;
+}
+/* American cities, in favorite cities list, have green text. */
+.uscities {
+    color: green;
+}
