@@ -1,0 +1,13 @@
+.image {
+    width: 200px;
+    height: 200px;
+    float: right;
+    border-width: 10px;
+    background-color: red;
+    border-color: blue;
+    border-style: dashed;
+    margin: 60px 20px 60px 20px;
+    outline-width: 25px;
+    outline-color: yellow;
+    outline-style: groove;
+}

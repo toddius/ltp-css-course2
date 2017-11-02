@@ -1,0 +1,36 @@
+p{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.slider {
+    top: 200px;
+    
+    position: absolute;
+    left: 0px;
+    height: 30px;
+    line-height: 30px;
+    
+    /* moves slider element all the way to the left and it will stay there but it wont be able to be seen at all in the browser. To make it visible is the next segment of code. */
+    width: 0px;
+    overflow: hidden;
+    
+    /* This bit of code makes the right part of the slider element visible in the browser so a user can hover over the element to make the transition occur. */
+    padding-left: 15px;
+    background-color: yellow;
+    
+    border-top: black 2px solid;
+    border-right: black 2px solid;
+    border-bottom: black 2px solid;
+    
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    
+    -webkit-transition: width 5s, background-color 5.5s;
+    -webkit-transition-timing-function: ease-out;
+}
+
+.slider:hover{
+    width: 80px;
+    background-color: rgb(200, 100, 100);
+}

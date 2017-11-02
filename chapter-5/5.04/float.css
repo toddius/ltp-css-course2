@@ -1,0 +1,32 @@
+.show-bkg{
+    background-color: gray;
+    color: white;
+}
+
+#target-left{
+    background-color: red;
+    
+    width: 200px;
+    height: 200px;
+    
+    /* display and position properties do not work to have text from one element wrap around the position of another element. */
+    
+    /* display: inline; 
+    left: 0px;
+    position: absolute; */
+    
+    float: left;
+    padding: 5px;
+    margin: 10px;
+}
+
+#target-right{
+    background-color: blue;
+    
+    width: 200px;
+    height: 200px;
+    
+    float: right;
+    padding: 5px;
+    margin: 10px;
+}

@@ -1,0 +1,28 @@
+.small_box {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    border: none;
+    display: block;
+    width: 150px;
+    height: 150px;
+}
+
+#Pic_1 {
+    padding-bottom: 20px;
+}
+
+#Pic_2 {
+    padding-top: 20px;
+}
+
+#Pic_3 {
+    margin-bottom: 5px;
+}
+
+#Pic_4 {
+    margin-top: 10px;
+}
+
+body {
+    margin: 0 0 0 0;
+}

@@ -1,0 +1,12 @@
+.image {
+    background-color: lightgreen;
+    float: left;
+    
+    width: 250px;
+    height: 250px;
+    
+    padding: 10px 10px 10px 10px;
+    border: black 3px dashed;
+    margin: 15 15 15 15;
+    outline: red 10px solid;
+}

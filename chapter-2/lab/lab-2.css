@@ -1,0 +1,40 @@
+h1 {
+    font-family: Kanit;
+}
+
+ul li{
+    list-style-type: square;
+}
+
+.main_body{
+    color: lightyellow;
+    width: 1000px;
+    height: 600px;
+    background-image: url('rainbow_tornado.jpeg'); 
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#my_menu .submenu ul{
+    display: none;
+    position: fixed;
+    background-color: dimgray;
+    list-style-type: none;
+    border-left: 3px solid dimgray;
+    border-bottom: 3px solid dimgray;
+    border-right: 3px solid dimgray;
+    margin-top: 3px;
+    padding-left: 30px;
+    padding-right: 10px;
+    
+}
+
+#my_menu .submenu:hover ul{
+    display: block;
+    position: fixed;
+}
+
+#my_menu {
+    background-color: dimgray;
+}

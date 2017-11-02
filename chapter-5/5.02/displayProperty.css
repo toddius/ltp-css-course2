@@ -1,0 +1,12 @@
+#col1{ 
+    color: blue;
+    /*display: inline;*/
+    display: block;
+    line-height: 50px;
+}
+
+.col2{
+    background-color: red;
+    /*display: block;*/
+    display: inline-block;
+}

@@ -1,0 +1,36 @@
+h1:hover {
+    width: 300px;
+    height: 50px;
+    background-color: red;
+    color: white;
+    font-family: arial;
+    margin-left: 471px; 
+    margin-bottom: 9px;
+    
+    -webkit-animation: colorChange 10s;
+    
+    -webkit-animation-iteration-count: infinite;
+       
+}
+
+@-webkit-keyframes colorChange{
+    8% {background-color: red;}
+    24% {background-color: blue;}
+    42% {background-color: yellow;}
+    59% {background-color: green;}
+    74% {background-color: orange;}
+    92% {background-color: purple;}
+    100% {background-color: red;}
+}
+
+/* wanted some practice adding more animation to practice my skills */
+
+h1{
+    font-family: arial;
+    text-align: center;
+}
+
+p{
+    font-family: serif;
+    text-align: center;
+}
