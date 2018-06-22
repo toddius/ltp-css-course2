@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>While Loops</title>
+        <script>
+        window.onload=function()
+        {
+            var counter = 1000;
+            while(counter > 0)
+                {
+                   document.getElementById('result').innerHTML += "<br>" + counter;
+                    counter = counter - 10;
+                }
+            
+            /*var counter = 0;
+            while(counter < 1001)
+                {
+                   document.getElementById('result').innerHTML += "<br>" + counter;
+                    counter = counter + 10;
+                }*/
+            
+            /*while(counter < 101)
+            {
+                //While counter is counting till 100 - print the counter then add one and print the counter and so on
+                document.getElementById('result').innerHTML += "<br>" + counter;
+                counter++;  //increment counter by 1
+            }*/
+        }
+        
+        </script>
+    </head>
+    <body>
+        <div id="result"></div>
+    </body>
+</html>

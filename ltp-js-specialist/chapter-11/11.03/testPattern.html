@@ -1,0 +1,19 @@
+<script>
+//var myString = "The quick brown fox jumped over the lazy dogs."
+//console.log(myString.search(/[0-9]/));
+//console returned value of -1. that means there were no values that matched and that the test failed
+    
+//var myString = "The quick brown fox jumped over the lazy dogs."
+//console.log(myString.search(/brown/i)); 
+//result came back as 10. that means it found the word 'brown' in the  number 10 caracter position in the string. it is the Character Index.
+    
+var myString = "The quick brown fox jumped over the lazy dogs."
+var searchFor = prompt("What would you like to search for?");
+    console.log(myString.search(/searchFor/));
+//This doesn't work becasue you can't use a variable name in the pattern
+    
+//Search and replace dots with dashes in a phone number. need to use a global expression to change all the dots to dashes and not just the first one.
+var number ="303.333.1234";
+    number = number.replace(/[.]/g, "-");
+    console.log(number);
+</script>

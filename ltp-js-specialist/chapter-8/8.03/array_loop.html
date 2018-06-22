@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Looping Through Arrays</title>
+        <script>
+        window.onload=function()
+        {
+            var cars = ["Plymoth", "Oldsmobile", "Volkswagon", "Mazda", "Chevy", "Hyundai", "Kia"];
+            console.log(cars.length);
+            var ticks = cars.length;
+            var x = 0;
+            var out = "";
+            while(x < ticks)
+                {
+                    out += cars[x];
+                    out += "<br>";
+                    x++;
+                }
+            document.getElementById("result").innerHTML += out;
+            
+            var cities = ["Denver", "Los Angeles", "San Francisco", "Chicago", "New York", "Philidelphia", "Pittsburgh"];
+            var out = "";
+            
+            for(var z=0; z < cities.length; x++)
+            {
+                out += cities[z];
+                out += "<br>";
+            }
+            
+            document.getElementById("result").innerHTML += out;
+        }
+        </script>
+    </head>
+    <body>
+        <div id="result"></div>
+    </body>
+</html>

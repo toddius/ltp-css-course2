@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JSON</title>
+        <script src="key.js"></script>
+        <script>
+        var xmlhttp;
+        
+        window.onload=function()
+        {
+            navigator.geolocation.getCurrentPosition(success, fail);
+        }
+        
+        function success(position)
+            {
+                var lat = position.coords.latitude;
+                var long = position.coords.longitude;
+                getPositionInfo(lat, long);
+            }
+        
+            function getPositionInfo(lat, long)
+            {
+                
+                //https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670,151.1957&radius=500&types=food&name=cruise&key=
+                var url ="https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + lat + "," + long;
+                url += "&radius=500&types=food&key=" + key;
+                xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = processPlaces;
+                xmlhttp.open("GET", url, true);
+                xmlhttp.send();
+            }
+            
+            function processPlaces()
+            {
+                if (xmlhttp.readyState == 4)
+                    {
+                        var jsonResponse = JSON.parse(xmlhttp.responseText);
+                        console.log(jsonResponse.results);
+                        //console.log(xmlhttp.responseText);
+                    }
+            }
+            
+        function fail(e)
+            {
+                alert(e.message);
+            }
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Variables</title>
+        <script>
+        var age;  //public or script scope
+            
+        window.onload = function()
+        {
+            var score; //declare variable called score (function scope)
+            score = 1000; //initialize variable
+            age = 46;  //combined declaration and initialization (SHORT CUT)
+            out();   
+        }
+        
+        function out()
+            {
+                //document.getElementById('result').innerHTML = score; //doesn't work becasue score isn't a public variable
+                
+                document.getElementById('result').innerHTML += "Age: " + age;
+            }
+        </script>
+    </head>
+    <body>
+        <div id="result"></div>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Anonymous Functions</title>
+        <script>
+        var btnPress;
+            
+        window.onload=function()
+        {
+            alert('window.onload!');
+            btnPress = document.getElementById('myButton');
+            /*btnPress.onclick = function()
+                {
+                    alert('Thanks for pressing me!');
+                }*/
+            btnPress.onmouseover = function()
+                {
+                    alert('Thanks for hovering your mouse over me!');
+                }
+        }
+        </script>
+    </head>
+    <body>
+        <div id="result"></div>
+        <button id="myButton">Press Me!</button>
+    </body>
+</html>

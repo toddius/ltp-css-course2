@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Getting Current Date and Time</title>
+        <script>
+        window.onload=function()
+        {
+            // Current date
+            var d = new Date();
+            var out = "";
+            out += "Day of the month: " + d.getDate() + "<br>";
+           out += "Year: " + d.getFullYear() + "<br>"; 
+          out += "Time: " + d.getHours() + ":" + d.getMinutes();
+            document.getElementById('result').innerHTML = out;
+        }
+        </script>
+    </head>
+    <body>
+        <div id="result"></div>
+    </body>
+</html>

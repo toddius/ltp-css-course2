@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chapter 10 Lab</title>
+        <meta charset="utf-8"/>
+    </head>
+    <body>
+        <form action="chapter10Lab.php" method="post" autocomplete="off">
+            <fieldset>
+                <legend>Fahrenheit-Celsius / Celsius-Fahrenheit conversions</legend>
+                Enter the value of your temperature: <br/>
+                <input type="number" name="tempValue"/><br/>
+                Choose the temperature scale you're entering: <br/>
+                <input type="radio" name="tempScale" value="fahren">Fahrenheit<br/>
+                <input type="radio" name="tempScale" value="celsius">Celsius<br/>
+                <input type="submit" name="submitTemp" value="Submit"/>
+            </fieldset>
+        
+        <br/>
+        
+            <fieldset>
+                <legend>inches-centimeter / centimeter-inches conversions</legend>
+                Enter the value of your length: <br/>
+                <input type="number" name="lengthValue"/><br/>
+                Choose the length scale you're entering: <br/>
+                <input type="radio" name="lengthScale" value="inch">inches<br/>
+                <input type="radio" name="lengthScale" value="cm">centimeters<br/>
+                <input type="submit" name="submitLength" value="Submit"/>
+            </fieldset>
+        
+        <br/>
+        
+            <fieldset>
+                <legend>miles-kilometers / kilometers-miles conversions</legend>
+                Enter the value of your distance: <br/>
+                <input type="number" name="distanceValue"/><br/>
+                Choose the distance scale you're entering: <br/>
+                <input type="radio" name="distanceScale" value="miles">miles<br/>
+                <input type="radio" name="distanceScale" value="km">kilometers<br/>
+                <input type="submit" name="submitDist" value="Submit"/>
+            </fieldset>
+        </form>
+        
+    </body>
+</html>

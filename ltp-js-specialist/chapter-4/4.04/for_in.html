@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>For In Loops</title>
+        <script>
+        window.onload=function()
+        {
+            var myObject = {a: 93, b: 72, c: 56, d: 88, e: 85, f: 91};
+            var myKeys = [];
+            var i = 0;
+            
+            for(myKeys[i++] in myObject)
+                console.log(myKeys);
+        }
+        </script>
+    </head>
+    <body>
+        <div id="result"></div>
+    </body>
+</html>

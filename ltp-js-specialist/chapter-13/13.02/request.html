@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Request</title>
+        <script>
+        var xmlhttp;
+            
+        window.onload=function()
+        {
+            xmlhttp = new XMLHttpRequest();
+            document.getElementById('btnGetInfo').addEventListener('click', getService);
+        }
+        
+        function getService(e)
+        {
+            var address = document.getElementById('address').value;
+            //https://maps.googleapis.com/maps/api/geocode/json?address=27%hartford%turnpike%vernon%ct&sensor=falase
+            
+            var url = "https://maps.googleapis.com/maps/api/geocode/xml?address=" + address + "&sensor=false";
+            
+            xmlhttp.onreadystatechange = process;
+            console.log(url);
+            xmlhttp.open("GET", url, true);
+            xmlhttp.send();
+        }
+            
+            function process()
+            {
+                //alert(xmlhttp.readyState);
+                if(xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    //alert(xmlhttp.responseText);
+                    //document.getElementById('result').innerHTML = xmlhttp.responseText;
+                    
+                   //console.log(xmlhttp.responseXML); console.log(xmlhttp.responseXML.documentElement);
+                    
+                    var lat = xmlhttp.responseXML.documentElement.getElementsByTagName('result')[0].getElementsByTagName('geometry')[0].getElementsByTagName('location')[0].getElementsByTagName('lat')[0].firstChild.nodeValue;
+                    
+                    var long = xmlhttp.responseXML.documentElement.getElementsByTagName('result')[0].getElementsByTagName('geometry')[0].getElementsByTagName('location')[0].getElementsByTagName('lng')[0].firstChild.nodeValue;
+                    
+                    document.getElementById('result').innerHTML = "The latitude is:" + lat + "<br/>and the longitude is:" + long;
+                }
+            }
+        </script>
+    </head>
+    <body>
+            <label for="address">Address:</label>
+            <input type="text" id="address" placeholder="Street City State" /><br/>
+            <button id="btnGetInfo">Get Address Info</button>
+            <div id="result"></div>
+    </body>
+</html>

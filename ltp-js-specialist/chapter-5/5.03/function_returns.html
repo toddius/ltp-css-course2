@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Function Returns</title>
+        <script>
+        function addThese(a,b)
+            {
+                var c = a + b;
+                return c;
+            }
+        
+        function subtractThese(a,b)
+            {
+                var c = a - b;
+                return c;
+            }
+         function multiplyThese(a,b)
+            {
+                var c = a * b;
+                return c;
+            }
+        window.onload=function()
+            {
+                var x = 250;
+                var y = 98.7;
+            
+                var sum = addThese(x,y);
+                document.getElementById('result').innerHTML = sum;
+                document.getElementById('result').innerHTML += "<br>" + multiplyThese(x,y);
+            
+                document.getElementById('result').innerHTML += "<br>" + subtractThese(x,y);
+            }
+        </script>
+    </head>
+    <body>
+        <div id="result"></div>
+    </body>
+</html>

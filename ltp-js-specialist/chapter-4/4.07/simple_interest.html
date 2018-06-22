@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple Interest</title>
+        <script>
+        window.onload=function()
+        {
+            document.getElementById('calcInterest').addEventListener('click', calcInterest);
+            
+            function calcInterest(e)
+            {
+                // values are coming in as strings so need to change them into float point numbers by using parseFloat  
+                var amount = parseFloat(document.getElementById('amount').value);
+                  var term = parseFloat(document.getElementById('term').value);
+                  var rate = parseFloat(document.getElementById('interest').value);
+                
+//                console.log(amount);
+//                console.log(term);
+//                console.log(rate);
+                
+                var x = 0;
+                var out = "";
+                while (x < term)
+                    {
+                        amount = amount + (amount * (rate/12/100));
+                        // console.log(Math.floor(amount));
+                        out += "Month number: " + (x + 1) + "  New amount:  $" + Math.floor(amount);
+                        out += "<br>"
+                        x++;
+                    }
+                document.getElementById('result').innerHTML = out;
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <label for="amount">Amount Invested ($):</label>
+        <input type="number" id="amount" /><br>
+        <label for="term">How many months?</label>
+        <input type="number" id="term" /><br>
+        <label for="interest">Interest Rate (%):</label>
+        <input type="number" id="interest" /><br>
+        <button id="calcInterest">Calculate Interest!</button>
+        <div id="result"></div>
+    </body>
+</html>

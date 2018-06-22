@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>slice(), split() and substr()</title>
+        <script>
+        window.onload=function()
+        {
+            var myString = "If you are strong enough, there are no precedents.";
+            var newString = myString.slice(0,15);
+            console.log(newString);
+            
+            var csv = "Todd,Jennifer,Cole,Emily,Oma,Katrina,Luke,Truxton";
+            var familyArray = csv.split(",");
+            console.log(familyArray);
+            for(var x=0; x < familyArray.length; x++)
+                {
+                    document.getElementById('result').innerHTML += familyArray[x] + "<br>";
+                }
+            
+            var theString = "My favorite genre of rock is grunge.";
+            console.log(theString.substr(3,8));
+        }
+        </script>
+    </head>
+    <body>
+        <div id="result"></div>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Output To Browser</title>
+        <script>
+            //document.write("Hello!"); 
+            //The above method is not recommended.
+            
+            window.onload = function()
+            {
+                //document.getElementById('one').innerHTML = "<h1>Welcome to the Thunder Dome!</h1>";
+                //document.getElementById('two').innerHTML = "<h3>Javascript Specialist Course</h3>";
+                
+                document.getElementById('myButton').addEventListener('click', respond);
+            }
+            
+            function respond(e)
+            {
+                document.getElementById('one').innerHTML = "<h1>Welcome to the Thunder Dome!</h1>";
+                document.getElementById('two').innerHTML = "<h3>Javascript Specialist Course</h3>";
+            }
+        </script>
+    </head>
+    <body>
+        <div id="one">This is Div 1</div>
+        <div id="two">This is Div 2</div>
+        <button id="myButton">Press Me</button>
+    </body>
+</html>

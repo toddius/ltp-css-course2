@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>For Loops</title>
+        <script>
+        window.onload=function()
+        {
+            for(var x = 100; x >0; x--)
+                {
+                    if(x%2==0) /* This is to get only even numbers. Remember % stands for mod (or remainder after division). Only even numbers are divisible by two - NO REMAINDER. So even numbers will always be true for the condition. */
+                        {
+                            document.getElementById('result').innerHTML += x + "<br>";
+                        }
+                }
+            
+            
+            /*var out = "";
+            for(var counter = 0; counter < 45; counter++)
+                {
+                    out += counter;
+                    out += "<br>";
+                }
+            document.getElementById('result').innerHTML += out;*/
+        }
+        </script>
+    </head>
+    <body>
+        <div id="result"></div>
+    </body>
+</html>

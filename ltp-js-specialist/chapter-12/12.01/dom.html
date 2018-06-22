@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM</title>
+        <script>
+        window.onload=function()
+        {
+            
+            document.getElementById('main').innerHTML += "<p>This element was added dynamically.</p>" 
+            console.log(document.getElementById('main'));
+        }
+        </script>
+    </head>
+    <body>
+        <h1>DOM Elements</h1>
+        <div id="main">
+        <p>Manipulating the DOM is fun!</p>
+        <p>Javascript can be used to manipulate the DOM.</p>
+        </div>
+    </body>
+</html>

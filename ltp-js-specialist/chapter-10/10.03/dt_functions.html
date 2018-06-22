@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>More date and Tiem Functions</title>
+        <script>
+        window.onload=function()
+        {
+           var d = new Date(); 
+            d.setFullYear(2020);
+            d.setHours(18);
+            //alert(d.getFullYear());
+            //alert(d);
+            //document.getElementById('result').innerHTML = d.toJSON();
+            //document.getElementById('result').innerHTML = d.toString();
+            
+            //document.getElementById('result').innerHTML = d.toLocaleDateString();
+            
+            //document.getElementById('result').innerHTML = d.toUTCString();
+            
+            document.getElementById('result').innerHTML = d.toISOString();
+        }
+        </script>
+    </head>
+    <body>
+        <div id="result"></div>
+    </body>
+</html>

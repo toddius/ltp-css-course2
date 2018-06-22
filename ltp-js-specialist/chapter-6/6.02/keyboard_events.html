@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Keyboard Events</title>
+        <script>
+        window.onload=function()
+        {
+           var textBox = document.getElementById('myText');
+            textBox.onkeypress = function(e)
+            {
+                console.log(e);
+                if(e.key == "E" && e.shiftKey == true)
+                    {
+                        //console.log("EEEEE!");
+                        textBox.style.display = "none";
+                    }
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <label for="myText">Type here:</label>
+        <input type="text" id="myText" />
+    </body>
+</html>

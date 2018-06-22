@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Functions</title>
+        <script>
+        function greeting()
+            {
+                var resultDiv = document.getElementById('result').innerHTML = "<h1>Greetings!</h1>";
+            }
+            
+        window.onload=function()
+        {
+            // greeting();
+            document.getElementById('btnGreet').addEventListener('click', greeting);
+        }
+        </script>
+    </head>
+    <body>
+        <div id="result"></div><br>
+        <!-- <button onclick="greeting()">Greet Me!</button> -->
+        <!-- Not a good idea to mix html and javascript like in the button above. Makes it more difficult to maintain code. -->
+        <button id="btnGreet">Greet Me!</button>
+    </body>
+</html>

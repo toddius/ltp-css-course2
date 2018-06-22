@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Array Functions</title>
+        <script>
+        window.onload=function()
+        {
+            var years = [2002,2003,2004,2005,2006,2007,2008,2009,2010,2011];
+            years.forEach(myFunction);
+            
+            console.log(years.indexOf(2006));
+            years.push(2012);
+            years.push(2013); /*These years will not show up in the browser because they are created after the console.log above was called*/
+            years.pop();
+            console.log(years.indexOf(2013));
+            
+            var names = ["Tom", "Dick", "Harry", "Janet", "Claire"];
+            console.log(names.sort());
+        }
+        
+        function myFunction(item, index)
+            {
+                document.getElementById('result').innerHTML += index + "|" + item + "<br>"; 
+            }
+        </script>
+    </head>
+    <body>
+        <div id="result"></div>
+    </body>
+</html>

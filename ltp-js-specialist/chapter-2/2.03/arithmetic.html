@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Math with Variables</title>
+        <script>
+        window.onload = function()
+        {
+        var operand1 = 2378;
+        var operand2 = 8763.2;
+        var operand3 = 15;
+        var out = "";
+            
+        out += "Addition: " + (operand1 + operand2); 
+        out += "<br>Subtraction: " + (operand1 - operand2); //can embed HTML into javascript. It looks like output to the browser follows the same rules at HTML
+        out += "<br>Multiplication: " + (operand1 * operand2);
+        out += "<br>Division: " + (operand1 / operand2);
+        out += "<br>Mod: " + (10 % 3);
+        out += "<br>++(increment): " + (++operand3);
+        out += "<br>--(decrement): " + (--operand3);
+        out += "<br>+=3: " + (operand3 += 3);
+        out += "<br>-=3: " + (operand3 -= 3);
+        out += "<br>*=3: " + (operand3 *= 3);    
+        document.getElementById('result').innerHTML = out;
+        }
+        </script>
+    </head>
+    <body>
+        <div id="result"></div>
+    </body>
+</html>

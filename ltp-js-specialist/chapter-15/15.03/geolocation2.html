@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Geolocation 2</title>
+        <style>
+        
+        </style>
+        
+        <script>
+        window.onload=function()
+        {
+            options = { enableHighAccuracy: false, timeout: 5000, maximumAge: 1000};
+            watch = navigator.geolocation.watchPosition(success, fail, options);
+            document.getElementById('btnStop').addEventListener('click', stopWatch, options);
+        }
+        
+        function success(position)
+        {
+            console.log(position);
+                var lat = position.coords.latitude;
+                var long = position.coords.longitude;
+                document.getElementById('lat').innerHTML = lat;
+                document.getElementById('long').innerHTML = long;
+        }
+            
+        function stopWatch(event)
+        {
+            navigator.geolocation.clearWatch(watch);
+        }
+            
+        function fail(e)
+        {
+            alert(e.message);
+        }
+        </script>
+    </head>
+    <body>
+        <p>Latitude: <output id="lat"></output></p> 
+        <p>Longitude: <output id="long"></output></p>
+        <button id="btnStop">Stop Tracking Me!</button>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arrays</title>
+        <script>
+        window.onload=function()
+        {
+           var teams = ["Broncos", "Avalanche", "Nuggets", "Rockies", "Dodgers", "Angels", "Kings", "Ducks"];
+            console.log(teams);
+            
+            var computers = new Array("Compaq", "Macintosh", "TI994A", "TRS-80", "Apple ][", "Commodore 64", "Osborn Pro");
+            console.log(computers);
+            
+           var family = [];
+            document.getElementById("result").innerHTML = computers[3];
+            document.getElementById("result").innerHTML += "<br>" + teams[5];        
+        
+            document.getElementById("result").innerHTML += "<br>" + family[0]; 
+            
+            family[0] = "Todd";
+            family[1] = "Jen";
+            family[2] = "Cole";
+            family[3] = "Emily";
+            computers[7] = "Amiga";
+            document.getElementById("result").innerHTML += "<br>" + family[0]; 
+            
+            document.getElementById("result").innerHTML += "<br>" + computers[7];
+            console.log(computers);
+        }
+        </script>
+    </head>
+    <body>
+        <div id="result"></div>
+    </body>
+</html>

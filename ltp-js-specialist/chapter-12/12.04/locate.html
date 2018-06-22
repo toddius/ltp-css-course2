@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM</title>
+        <script>
+        window.onload=function()
+        {
+            var result = document.getElementById('result');
+            var elements = document.getElementsByTagName('p');
+            var x = document.getElementsByClassName('last');
+            result.innerHTML = elements;
+            //console.log(elements);
+            console.log(x[0]);
+        }
+        </script>
+    </head>
+    <body>
+        <h1>Elements, DOM and FUN!</h1>
+        <p>This is a node.</p>
+        <p>This is another node.</p>
+        <p class="last">This is a third node!</p>
+        <div id="result"></div>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Function Parameters</title>
+        <script>
+        //Function with three parameters
+            
+            function calcBattingAverage(atBats,hits,walks)
+            {
+                ba = hits/(atBats-walks);
+                document.getElementById('result').innerHTML = ba;
+            }
+            
+        window.onload = function()
+        {
+            calcBattingAverage(300, 50, 75);
+        }
+        
+        //Function with one parameter
+            /* function calcDogYears(ageHumanYears)
+            {
+                var dogYears = ageHumanYears * 7;
+                //console.log(dogYears);
+                document.getElementById('result').innerHTML = "<h1>Your age in dog years is: </h1>" + dogYears;
+            }
+            
+        window.onload=function()
+            {
+                calcDogYears(46);
+            }*/
+        </script>
+    </head>
+    <body>
+        <!-- <label for="humanYears">Enter your age</label>
+        <input type="number" id="humanYears" /> -->
+        <div id="result"></div>
+    </body>
+</html>

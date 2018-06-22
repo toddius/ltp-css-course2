@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Event Object</title>
+        <style>
+            #targetA, #targetB
+            {
+                height: 200px;
+                width: 200px;
+            }
+            
+            #targetA
+            {
+                background-color: #900;
+            }
+            
+            #targetB
+            {
+                background-color: #009;
+                margin-top: 20px;
+            }
+        </style>
+        <script>
+        window.onload=function()
+        {
+            var a = document.getElementById('targetA');
+            var b = document.getElementById('targetB');
+            
+            a.addEventListener('click', processEvent);
+            b.addEventListener('click', processEvent);
+        }
+        
+        function processEvent(e)
+            {
+                console.log(e);
+                if(e.target.id == "targetA")
+                    {
+                        document.getElementById('result').innerHTML = "<h1>Target A</h1>";
+                    } 
+                else
+                    {
+                        document.getElementById('result').innerHTML = "<h1>Target B</h1>";
+                    }
+                var xPos = e.clientX;
+                var yPos = e.clientY;
+                
+                document.getElementById('result').innerHTML += "<br>X:" + xPos + "<br>Y:" + yPos;
+            }
+        </script>
+    </head>
+    <body>
+        <div id="targetA"></div>
+        <div id="targetB"></div>
+        <div id="result"></div>
+    </body>
+</html>

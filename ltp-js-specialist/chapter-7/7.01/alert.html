@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Alert Dialog</title>
+        <script>
+        window.onload=function()
+        {
+            //alert('Welcome to Javacript Specialist Course!');
+            document.getElementById('myButton').addEventListener('click', btnPress)
+            
+            function btnPress(e)
+            {
+               // alert('Welcome to Javacript Specialist Course!');
+               alert(e.target.id); 
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <button id="myButton">Press Me!</button>
+    </body>
+</html>

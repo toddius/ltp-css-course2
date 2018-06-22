@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>If...else...if</title>
+        <script>
+        window.onload=function()
+        {
+            document.getElementById("btnShow").addEventListener('click', determineGrade);
+        }
+        
+        function determineGrade(e)
+            {
+            var letterGrade = "";
+            var numericalGrade = document.getElementById("numberGrade").value;
+            if(numericalGrade >= 90)
+                {
+                    letterGrade="A";
+                } 
+            
+            else if (numericalGrade >= 80)
+                {
+                    letterGrade="B";
+                }
+            else if (numericalGrade >= 70)
+                {
+                    letterGrade = "C";
+                }
+            else if (numericalGrade >= 60)
+                {
+                    letterGrade = "D";
+                }
+            else
+                {
+                    letterGrade = "F";    
+                }
+            
+            document.getElementById("result").innerHTML = "<h1>" + letterGrade + "</h1>";
+            }
+        </script>
+    </head>
+    <body>
+        <label for="numberGrade">Numerical Grade</label>
+        <input type="number" min="0" max="100" id="numberGrade" />
+        <button id="btnShow">Show me letter grade</button>
+        <div id="result"></div>
+    </body>
+</html>

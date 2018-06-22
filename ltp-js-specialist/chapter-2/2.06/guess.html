@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Booleans</title>
+        <script>
+            var randomNumber;
+            
+            window.onload = function()
+            {
+                randomNumber = Math.floor((Math.random() *10) + 1);
+                console.log(randomNumber);
+                
+                document.getElementById('btnCheck').addEventListener('click', checkGuess);
+            }
+            
+            function checkGuess(e)
+            {
+                var userGuess = document.getElementById('guess').value;
+                if(userGuess == randomNumber)
+                {
+                    document.getElementById('result').innerHTML = "<h1>Correct</h1>";    
+                } else
+                {
+                   document.getElementById('result').innerHTML = "<h1>Wrong</h1>"; 
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <label for="guess">Guess a Number between 1 and 10:</label>
+        <input type="number" min="1" max="10" id="guess" />
+        <button id="btnCheck">Am I Right?</button>
+        <div id="result"></div>
+    </body>
+</html>

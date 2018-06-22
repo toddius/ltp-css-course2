@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Math Functions</title>
+        <script>
+        window.onload = function ()
+        {
+            var out = "";
+            out += Math.PI; //Pi value to 15 difgits
+            out += "<br>" + Math.sqrt(81); //square root
+            out += "<br>" + Math.abs(15-35);  //absolute value
+            out += "<br>" + Math.round(69/6.22);  //round answer
+            out += "<br>" + Math.random();
+            out += "<br>" + Math.floor(Math.random() * 10 + 1); //add +1 so if random number generator produces 0, still get put output that falls in range of 1-10
+            
+            document.getElementById('result').innerHTML = out;
+        }
+        </script>
+    </head>
+    <body>
+        <div id="result"></div>
+    </body>
+</html>

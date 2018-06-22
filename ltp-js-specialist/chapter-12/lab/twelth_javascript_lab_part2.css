@@ -1,0 +1,28 @@
+body{
+    font-family: Kanit;
+    }
+
+/*
+
+This is my attempt at styling a dropdown menu method for removing item from the menu. I couldn't get it to work and went with another method that didn't require this CSS.
+
+#dropDown {
+    display: none;
+    position: fixed;
+    background-color: lightblue;
+    list-style-type: none;
+    margin-top: 1px;
+    padding-left: 20px;
+    padding-right: 10px;
+            }
+
+#dropDown:hover option{
+    display: block;
+    position: fixed;
+    color: yellow;
+    background-color: lightgray;
+}
+
+option:hover {
+    background-color: darkgray;*/
+}

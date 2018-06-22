@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM</title>
+        <script>
+        window.onload=function()
+        {
+            var theList = document.getElementById('myList');
+            var node = document.createElement("LI");
+            var text = document.createTextNode("Yes");
+            node.appendChild(text);
+            //console.log(node);
+            theList.appendChild(node);
+            var node2 = document.createElement("LI");
+            var text2 = document.createTextNode("Talking Heads");
+            node2.appendChild(text2);
+            theList.appendChild(node2);
+            
+            theList.removeChild(theList.childNodes[1]);
+        }
+        </script>
+    </head>
+    <body>
+        <ul id="myList">
+            <li>The Police</li>
+            <li>REM</li>    
+        </ul>
+    </body>
+</html>

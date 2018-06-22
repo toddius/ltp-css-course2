@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Changing DOMs</title>
+        <style>
+            .blue {
+                color: blue;
+                font-weight: bold;
+                  }
+            
+            .red {
+                color: red;
+                font-weight: normal;
+                text-decoration: overline;
+            }
+        </style>
+        <script>
+        window.onload=function()
+        {
+            var content = document.getElementById('main');
+            content.setAttribute('class', 'blue');
+          
+            
+            //set class to red
+            //var content = document.getElementById('main');
+            //content.setAttribute('class', 'red');
+            
+            content.style.backgroundColor = "yellow";
+            content.style.fontWeight = "bold";
+            content.style.border = "2px solid green";
+        }
+        </script>
+    </head>
+    <body>
+        <h1>DOM ELements</h1>
+        <div id="main">
+        <p>Manipulating the DOM is fun!</p>
+        <p>Javascript can be used to manipulate the DOM.</p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Setting a Custom Date and Time</title>
+        <script>
+        window.onload=function()
+        {
+            //Yesterday date
+            var d = new Date(2017,12,9,22,16,30);
+            document.getElementById('result').innerHTML = d + "<br>";
+            
+            var c = new Date();
+            document.getElementById('result').innerHTML = Date.now() + "<br>";
+            
+            //Yesterday using UNIX millisecond time
+            var e = Date.now() - (24 * 60 * 60);
+            document.getElementById('result').innerHTML += e;
+        }
+        </script>
+    </head>
+    <body>
+        <div id="result"></div>
+    </body>
+</html>

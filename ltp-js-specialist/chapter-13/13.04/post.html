@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Post</title>
+        <script>
+        var xmlhttp;
+            
+        window.onload=function()
+        {
+            xmlhttp = new XMLHttpRequest();
+            
+            var url = "https://makemeapassword.org/api/v1/passphrase/plain?pc=1&wc=3&sp=n";
+            
+            xmlhttp.onreadystatechange = process;
+            console.log(url);
+            
+            xmlhttp.open("POST", url, true);
+            xmlhttp.setRequestHeader("wc", "3");
+            xmlhttp.setRequestHeader("pc", "1");
+            xmlhttp.setRequestHeader("sp", "n");
+            xmlhttp.send();
+        }
+            
+            function process()
+            {
+                //alert(xmlhttp.readyState);
+                if(xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    alert(xmlhttp.responseText);
+                }
+            }
+        </script>
+    </head>
+    <body>
+       <div id="result"></div>     
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Break and Continue</title>
+        <script>
+        window.onload=function()
+        {
+            /*var y = 0;
+            while(y < 15)
+                {
+                    document.getElementById('result').innerHTML += y + "<br>";
+                    y++;
+                    if(y==11) {break; }
+                }*/
+            
+            var x = 1;
+            while (x < 50)
+                {
+                    if(x%2 == 0) { console.log(x); x++; continue;}
+                    document.getElementById('result').innerHTML += (x + "<br>");
+                    x++;
+                }
+        }
+        </script>
+    </head>
+    <body>
+        <div id="result"></div>
+    </body>
+</html>
